@@ -26,7 +26,7 @@
         <dependency>
             <groupId>org.renjin</groupId>
             <artifactId>renjin-script-engine</artifactId>
-            <version>3.4-java6-RC4</version>
+            <version>3.4-java6-RC12</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
