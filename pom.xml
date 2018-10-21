@@ -19,6 +19,7 @@
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
+        <renjin.version>3.4.16-java6</renjin.version>
     </properties>
 
     <dependencies>
@@ -26,7 +27,7 @@
         <dependency>
             <groupId>org.renjin</groupId>
             <artifactId>renjin-script-engine</artifactId>
-            <version>3.4-java6-RC15</version>
+            <version>${renjin.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
