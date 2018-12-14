@@ -1,0 +1,7 @@
+target
+.vagrant
+.idea
+*.iml
+shell/loadjava.log
+shell/missing.jar
+
