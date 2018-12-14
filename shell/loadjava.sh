@@ -7,7 +7,6 @@ rm -f /vagrant/shell/missing.jar
 
 loadjava -force \
          -resolve \
-         -grant public \
          -genmissingjar /vagrant/shell/missing.jar \
          -fileout /vagrant/shell/loadjava.log \
          -verbose  \
