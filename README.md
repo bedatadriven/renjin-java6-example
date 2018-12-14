@@ -2,14 +2,14 @@
 Renjin Example with Oracle 11.2g R2
 ===================================
 
-
-This is an example of how to use Renjin to use R in a stored procedure or
-function from within an Oracle database.
+This is an example demonstrates how to use Renjin in a stored procedure or
+function from within an Oracle Database.
 
 ## Oracle Database Setup
 
 This example requires Oracle 11g, release 11.2.0.4 or later. Earlier
-releases do not support Java 1.6.
+releases do not support Java 1.6. Note that Oracle XE does not support
+Java-language stored procedures at all.
 
 This repository includes a Vagrant file that will construct a Virtual
 Box Virtual Machine with a development version of Oracle 11g R2.0.4
@@ -177,4 +177,4 @@ RENJIN_DNORM(0)
 
 ```
 
-See the [shell/test.sql] script for further examples.
+See the [test.sql](shell/test.sql) script for further examples.
