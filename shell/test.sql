@@ -1,5 +1,8 @@
-
+SET ECHO ON
 CONNECT dbpass/sys as sysdba
+
+DROP TABLE numbers;
+
 
 WHENEVER SQLERROR exit sql.sqlcode;
 
