@@ -2,8 +2,8 @@
 Renjin Example with Oracle 11.2g R2
 ===================================
 
-This is an example demonstrates how to use Renjin in a stored procedure or
-function from within an Oracle Database.
+This is an example demonstrates how R can be used in an Oracle
+Stored Procedure with the help of Renjin.
 
 ## Oracle Database Setup
 
@@ -25,6 +25,21 @@ Vagrant 2.2.2
 
 $ vagrant up
 $ vagrant ssh
+Last login: Fri Dec 14 16:55:49 2018 from 10.0.2.2
+
+[oracledb@oraclebox ~]$ sqlplus /nolog
+SQL*Plus: Release 11.2.0.4.0 Production on Fri Dec 14 16:56:56 2018
+
+Copyright (c) 1982, 2013, Oracle.  All rights reserved.
+
+SQL> CONNECT dbpass/sys as sysdba
+Connected.
+
+SQL> SELECT 1+1 FROM DUAL;
+
+       1+1
+----------
+         2
 
 ```
 
@@ -138,10 +153,7 @@ for example, contains references to a generator class that is never
 used at runtime.
 
 We know that these "missing" classes aren't actually required because
-the build we provided passes our full test suite.
-For this reason, you can safely ignore the warnings issued by the
-loadjava tool, and remove both of these tables, which are only used
-during compilation of the generated stub classes.
+the Renjin release passes the full Renjin test suite without them.
 
 # Define the function
 
@@ -162,10 +174,11 @@ SQL> CONNECT dbpass/sys as sysdba
 Connected.
 
 SQL> CREATE OR REPLACE FUNCTION renjin_dnorm(x FLOAT)
-      RETURN FLOAT
-      AS LANGUAGE JAVA
-      NAME 'Renjin.dnorm(double) return double';
-/
+  2        RETURN FLOAT
+  3        AS LANGUAGE JAVA
+  4        NAME 'Renjin.dnorm(double) return double';
+  5  /
+
 Function created.
 
 SQL> SELECT renjin_dnorm(0) FROM dual;
