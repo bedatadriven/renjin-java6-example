@@ -2,7 +2,7 @@
 Renjin Example with Oracle 11.2g R2
 ===================================
 
-This is an example demonstrates how R can be used in an Oracle
+This example demonstrates how R can be used in an Oracle
 Stored Procedure with the help of Renjin.
 
 ## Oracle Database Setup
